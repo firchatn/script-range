@@ -1,46 +1,49 @@
 #! /bin/bash
-cd /home/firas/test
+echo 'welcome to range my directory' 
+echo 'path plz'
+read path
+cd $path
 
 if [ ! -d "img" ];then
-	echo "creation de dossier img";
+	echo "create directory img";
 	mkdir img
 else 
-	echo "img exsite";
+	echo "directory img here !";
 fi
 
 if [ ! -d "music" ];then
-       echo "creation de dossier music";
+       echo "create directory  music";
 	mkdir music
 fi
 
 if [ ! -d "video" ];then
-       echo "creation de dossier video";
+       echo "create directory video";
 	mkdir video
 fi
 
 if [ ! -d "docs" ];then
-       echo "creation de dossier docs";
+       echo "create directory  docs";
 	mkdir docs
 fi
 
 if [ ! -f *.mp3 ];then
-	echo "pas de music ici";
+	echo "no  music here";
 fi
 
 if [ ! -f *.mp4 ];then
-	echo "pas de video ici";
+	echo "no video here";
 fi
 
 if [ ! -f *.jpg ];then
-	echo "pas de image ici";
+	echo "no image here";
 fi
 
 if [ ! -f *.pfe ];then
-	echo "pas de document ici";
+	echo "no document here";
 fi
 
 mv *.jpg /home/firas/test/img
 mv *.mp3 /home/firas/test/music
 mv *.mp4 /home/firas/test/video
 mv *.pdf /home/firas/test/docs
-echo 'fin scprit with succes !'
+echo 'end scprit with succes !'
