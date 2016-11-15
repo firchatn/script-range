@@ -42,8 +42,19 @@ if [ ! -f *.pfe ];then
 	echo "no document here";
 fi
 
-mv *.jpg /home/firas/test/img
-mv *.mp3 /home/firas/test/music
-mv *.mp4 /home/firas/test/video
-mv *.pdf /home/firas/test/docs
+
+for entry in *;do
+	if [ -f "$entry" ];then
+		echo $entry
+	fi
+done
+echo 'you want to range all this file ? : y/n'
+read x
+if [ $x == 'y' ];then
+	mv *.jpg /home/firas/test/img
+	mv *.mp3 /home/firas/test/music
+	mv *.mp4 /home/firas/test/video
+	mv *.pdf /home/firas/test/docs
+fi
+
 echo 'end scprit with succes !'
