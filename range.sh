@@ -51,10 +51,10 @@ done
 echo 'you want to range all this file ? : y/n'
 read x
 if [ $x == 'y' ];then
-	mv *.jpg /home/firas/test/img
-	mv *.mp3 /home/firas/test/music
-	mv *.mp4 /home/firas/test/video
-	mv *.pdf /home/firas/test/docs
+	mv *.jpg $path/img
+	mv *.mp3 $path/music
+	mv *.mp4 $path/video
+	mv *.pdf $path/docs
 fi
 
 echo 'end scprit with succes !'
