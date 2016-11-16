@@ -1,6 +1,6 @@
 #! /bin/bash
-echo 'welcome to range my directory' 
-echo 'path plz'
+echo 'welcome to range my directory'
+echo 'path plz :'
 read path
 cd $path
 
@@ -14,16 +14,22 @@ fi
 if [ ! -d "music" ];then
        echo "create directory  music";
 	mkdir music
+else
+	echo "directory img here !";
 fi
 
 if [ ! -d "video" ];then
        echo "create directory video";
 	mkdir video
+else
+	echo "directory video here !";
 fi
 
 if [ ! -d "docs" ];then
        echo "create directory  docs";
 	mkdir docs
+else
+	echo "directory docs here !";
 fi
 
 if [ ! -f *.mp3 ];then
@@ -42,6 +48,7 @@ if [ ! -f *.pfe ];then
 	echo "no document here";
 fi
 
+echo 'files : '
 
 for entry in *;do
 	if [ -f "$entry" ];then
